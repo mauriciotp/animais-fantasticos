@@ -10,7 +10,7 @@ export default class Modal {
   }
 
   toggleModal() {
-    this.containerModal.classList.toggle('ativo');
+    this.containerModal.classList.toggle("ativo");
   }
 
   eventToggleModal(event) {
@@ -25,9 +25,9 @@ export default class Modal {
   }
 
   addModalEvent() {
-    this.botaoAbrir.addEventListener('click', this.eventToggleModal);
-    this.botaoFechar.addEventListener('click', this.eventToggleModal);
-    this.containerModal.addEventListener('click', this.cliqueForaModal);
+    this.botaoAbrir.addEventListener("click", this.eventToggleModal);
+    this.botaoFechar.addEventListener("click", this.eventToggleModal);
+    this.containerModal.addEventListener("click", this.cliqueForaModal);
   }
 
   init() {
