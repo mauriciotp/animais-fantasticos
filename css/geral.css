@@ -1,4 +1,12 @@
-body, h1, h2, ul, li, p, dt, dd, dl {
+body,
+h1,
+h2,
+ul,
+li,
+p,
+dt,
+dd,
+dl {
   margin: 0px;
   padding: 0px;
 }
@@ -42,11 +50,11 @@ body {
   margin-right: 10px;
   color: #222;
   text-decoration: none;
-  font-family: 'Lucida', monospace, sans-serif;
+  font-family: "Lucida", monospace, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: .875rem;
-  letter-spacing: .1rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.1rem;
 }
 
 .grid-section {
@@ -61,7 +69,7 @@ body {
 }
 
 .titulo {
-  font-family: 'Playfair Display SC', georgia;
+  font-family: "Playfair Display SC", georgia;
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
@@ -70,16 +78,16 @@ body {
 }
 
 .animais h2 {
-  font-family: 'Lucida', monospace, sans-serif;
+  font-family: "Lucida", monospace, sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   margin-bottom: 1rem;
-  color: #e54; 
+  color: #e54;
 }
 
 .animais h2::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 40px;
   height: 10px;
@@ -103,7 +111,7 @@ body {
   cursor: pointer;
 }
 
-.animais-lista::-webkit-scrollbar  {
+.animais-lista::-webkit-scrollbar {
   width: 18px;
 }
 
@@ -114,7 +122,7 @@ body {
 }
 
 .animais-lista::-webkit-scrollbar-track {
-  background: #faf6ed; 
+  background: #faf6ed;
 }
 
 .animais-descricao {
@@ -122,7 +130,7 @@ body {
 }
 
 .animais-descricao section {
-  margin-bottom: 3rem;  
+  margin-bottom: 3rem;
 }
 
 .faq-lista {
@@ -130,26 +138,26 @@ body {
 }
 
 .faq-lista dt {
-  font-family: 'Lucida', monospace, sans-serif;
+  font-family: "Lucida", monospace, sans-serif;
   font-weight: bold;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   color: #e54;
 }
 
 .faq-lista dt::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;  
+  background: #fb5;
 }
 
 .faq-lista dd {
   font-family: Helvetica, Arial;
-  margin-bottom: .5rem;
-  margin-left: 30px;  
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
 }
 
 .mapa {
@@ -166,23 +174,23 @@ body {
 }
 
 .dados li::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 10px;
   margin-right: 10px;
-  background: #fb5;  
+  background: #fb5;
 }
 
 .copy {
   grid-column: 3/5;
   margin-bottom: 2rem;
-  background: #fb5; 
+  background: #fb5;
 }
 
 .copy p {
   padding: 20px;
-  font-family: 'Lucida', monospace, sans-serif;
+  font-family: "Lucida", monospace, sans-serif;
   font-weight: bold;
 }
 
@@ -191,7 +199,9 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .menu, .grid-section, .copy {
+  .menu,
+  .grid-section,
+  .copy {
     grid-column: 1;
   }
 
@@ -204,12 +214,14 @@ body {
     grid-column: 1;
   }
 
-  .faq-lista, .dados, .lista {
+  .faq-lista,
+  .dados,
+  .lista {
     grid-column: 1/3;
   }
 
   .grid-section h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .menu {
@@ -224,7 +236,7 @@ body {
     margin-bottom: 0px;
   }
 }
-  
+
 .js [data-tab="content"] section {
   display: none;
 }
@@ -234,11 +246,11 @@ body {
 }
 
 [data-tab="content"] section.ativo.show-right {
-  animation: show-right .5s forwards;
+  animation: show-right 0.5s forwards;
 }
 
 [data-tab="content"] section.ativo.show-down {
-  animation: show-down .5s forwards;
+  animation: show-down 0.5s forwards;
 }
 
 @keyframes show-right {
@@ -272,17 +284,24 @@ body {
 }
 
 [data-anime="accordion"] dt::after {
-  content: '↴';
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/arrow-red.svg") no-repeat center center;
   margin-left: 10px;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
 
 [data-anime="accordion"] dt.ativo::after {
-  content: '⬏';
+  content: "";
+  transform: rotate(-90deg);
 }
 
 [data-anime="accordion"] dd.ativo {
   display: block;
-  animation: slideDown .5s forwards;
+  animation: slideDown 0.5s forwards;
 }
 
 @keyframes slideDown {
@@ -300,7 +319,7 @@ body {
 .js [data-anime="scroll"] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .js [data-anime="scroll"].ativo {
@@ -310,7 +329,7 @@ body {
 
 [data-semana]::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   background: #e54;
@@ -321,7 +340,7 @@ body {
 
 [data-semana].aberto::after {
   display: inline-block;
-  content: '';
+  content: "";
   width: 6px;
   height: 6px;
   background: #3f4;
@@ -332,7 +351,14 @@ body {
 
 .btc-preco {
   background: #3f4;
-  padding: .2rem .5rem;
+  padding: 0.2rem 0.5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrow-black {
+  background: url("../img/arrow-black.svg") no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
